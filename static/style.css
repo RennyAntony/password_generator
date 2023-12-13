@@ -1,0 +1,84 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Adjust the width as needed */
+    max-width: 400px; /* Set a maximum width for smaller screens */
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; /* Make the input width 100% */
+}
+
+button {
+    background-color: #0d9f0d;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; /* Make the button width 100% */
+}
+
+button:hover {
+    background-color: #2b8637;
+}
+
+#password-output {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Responsive styles for smaller screens */
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 70%; /* Adjust the width for smaller screens */
+        padding:25px; /* Adjust padding for better spacing on smaller screens */
+    }
+
+    h1 {
+        font-size: 1.4em; /* Adjust the font size for the heading on smaller screens */
+    }
+
+    input {
+        margin-bottom: 10px; /* Adjust the margin for inputs on smaller screens */
+    }
+
+    button {
+        padding: 8px; /* Adjust padding for the button on smaller screens */
+    }
+}

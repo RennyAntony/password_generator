@@ -1,0 +1,33 @@
+<!-- password_generator/templates/password_generator/generate_password.html -->
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%load static%}
+    <link rel="stylesheet" href="{%  static 'style.css' %}">
+    <title>Password Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <form method="post" action="{% url 'generate_password' %}">
+            {% csrf_token %}
+            <label for="nr-letters">How many Letters? :</label>
+            <input type="number" id="nr-letters" name="nr_letters" required>
+
+            <label for="nr-symbols">How many Symbols? :</label>
+            <input type="number" id="nr-symbols" name="nr_symbols" required>
+
+            <label for="nr-numbers">How many Numbers? :</label>
+            <input type="number" id="nr-numbers" name="nr_numbers" required>
+
+            <button type="submit">Generate Password</button>
+
+            <p id="password-output">{% if password %}Your password is: {{ password }}{% endif %}</p>
+        </form>
+    </div>
+    
+</body>
+</html>
